@@ -659,11 +659,19 @@ address p {
   display: inline-block;
   width: 358px;
   height: 50px;
+  padding: 15px;
+
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
+  
+  font-family: inherit;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 16px;
+  color: var(--common-color);
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -673,7 +681,8 @@ address p {
 }
 
 .form-input::placeholder {
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -691,11 +700,11 @@ address p {
   padding: 10px 62px 10px 29px;
 
   background: var(--hover-color);
-  outline: none;
   border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -826,7 +835,7 @@ address p {
 
 .examples-thumb{
   position: relative;
-  overflow:hidden
+  overflow: hidden;
 }
 
 .examples-overlay{
@@ -917,22 +926,39 @@ address p {
   border-radius: 50%;
   cursor: pointer;
 }
-  .close-icon {
+.close-icon {
   padding-top: 3px;
   padding-right: 3px;
   padding-bottom: 4px;
   padding-left: 4px;
+  color: currentColor;
   }
 
-  .modal-form input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
+.modal-form .modal-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  background-color: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  font-family: inherit;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 16px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .modal-form h1 {
+.modal-form h1 {
   margin-bottom: 12px;
 
+  font-family: inherit;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -943,7 +969,8 @@ address p {
   color: var(--h-color);
   }
 
-  .form-field {
+.form-field {
+  font-family: inherit;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -951,4 +978,134 @@ address p {
   letter-spacing: 0.01em;
 
   color: var(--p-color);
+
+  cursor: pointer;
   }
+
+.modal-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  
+  font-family: inherit;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 16px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.agreement {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 32px;
+  padding-left: 22px;
+  
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: var(--p-color);
+  cursor: pointer;
+  }
+
+.terms-of-agreement {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--hover-color);
+}
+
+.icon-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+
+.agree-check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.agree-check:checked .icon-checkbox{
+  background: #789023;
+  /*background-color: var(--hover-color);
+  background-image: url(../images/icon-check.svg);
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;*/
+}
+
+.modal-form button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 55px;
+  min-width: 200px;
+  min-height: 50px;
+  margin: 0 auto;
+
+  background: var(--hover-color);
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; 
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+
+  cursor: pointer;
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus, .modal-form textarea:focus, .agreement-input:focus, .modal-form textarea:focus {
+  border: 1px solid var(--hover-color);
+}
+
+.modal-input:focus+.icon-input{
+  fill: var(--hover-color);
+}
+
+.close-btn:hover .close-icon, .close-btn:focus .close-icon, .close-btn:active .close-icon{
+  fill: var(--hover-color);
+}
+
+.modal-form button:hover, .modal-form button:focus{
+  background: #188CE8;
+}
+
+.icon-input {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-thumb{
+  position: relative;
+}
