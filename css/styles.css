@@ -784,21 +784,14 @@ address p {
 }
 
 .work-examples {
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - 90px) / 3);
   margin-left: var(--card-margin);
+  margin-top: var(--card-margin);
 
   background-color: var(--common-color);
   border: 1px solid #EEEEEE;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.work-examples:nth-child(3n+1){
-  margin-left: 0;
-}
-
-.work-examples:not(:nth-child(-n+3)){
-  margin-top: var(--card-margin);
 }
 
 .work-examples h2 {
@@ -929,7 +922,7 @@ address p {
   padding-bottom: 4px;
   padding-left: 4px;
   color: currentColor;
-  }
+}
 
 .modal-form .modal-input {
   display: block;
@@ -950,7 +943,7 @@ address p {
   font-size: 16px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
 .modal-form h1 {
   margin-bottom: 12px;
@@ -964,7 +957,7 @@ address p {
   letter-spacing: 0.03em;
   
   color: var(--h-color);
-  }
+}
 
 .form-field {
   font-family: inherit;
@@ -977,7 +970,7 @@ address p {
   color: var(--p-color);
 
   cursor: pointer;
-  }
+}
 
 .modal-form textarea {
   display: block;
@@ -994,7 +987,7 @@ address p {
   font-size: 16px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
 .label-agree {
   position: relative;
@@ -1011,7 +1004,7 @@ address p {
 
   color: var(--p-color);
   cursor: pointer;
-  }
+}
 
 .terms-of-agreement {
   font-family: inherit;
